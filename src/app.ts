@@ -12,7 +12,7 @@ class App {
   public app: express.Application;
 
   constructor(controllers: Controller[]) {
-    this.app = express();
+    this.app = express.default();
 
     this.initializeMiddlewares();
     this.initializeControllers(controllers);
