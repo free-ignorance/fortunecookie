@@ -3,6 +3,9 @@ name: Default Node CI
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN} # not required for public repos
 
 jobs:
   lint:
