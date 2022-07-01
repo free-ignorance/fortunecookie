@@ -4,7 +4,7 @@ import { getFortune } from "../models/fortune";
 
 class MainController extends DefaultController {
   constructor() {
-    super("/lunar");
+    super("/");
     this.initializeRoutes();
   }
 
