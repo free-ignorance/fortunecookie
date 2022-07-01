@@ -16,7 +16,7 @@
     "daphne89 <https://github.com/daphne89>"
   ],
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "start:dev": "ts-node src/server.ts",
     "build": "tsc",
     "postbuild": "cp package.json dist/package.json && cd dist && npm install",
