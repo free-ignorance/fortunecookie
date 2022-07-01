@@ -67,6 +67,10 @@ const li = [
   "It's your attitude not your aptitude that determines your altitude.",
   "A calm sea does not make a skilled sailor.",
   "A Judgement will rule in your favor.",
+  "It's all right to have butterflies in your stomach. Just get them to fly in formation.",
+  "We all have extraordinary coded within us, waiting to be released.",
+  "Don't worry about the stock market. Invest in family.",
+  "Everything has beauty but not everyone sees it.",
 ];
 
 export function getFortune(): string {
