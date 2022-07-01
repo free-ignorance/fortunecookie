@@ -3,6 +3,8 @@ import * as express from "express";
 import helmet from "helmet";
 import compression from "compression";
 
+const PORT =  process.env.PORT || 5000;
+
 interface Controller {
   path: string;
   router: express.Router;
@@ -19,8 +21,8 @@ class App {
   }
 
   public listen() {
-    this.app.listen(process.env.PORT, () => {
-      console.log(`App listening on the port ${process.env.PORT}`);
+    this.app.listen(PORT, () => {
+      console.log(`App listening on the port ${PORT}`);
     });
   }
 
