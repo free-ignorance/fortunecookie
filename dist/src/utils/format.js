@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toDDHHMMSS = void 0;
 /**
  * toHHMMSS
  * turns an amount of seconds into days, hours, minutes seconds
