@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getFortune = void 0;
 const li = [
     "You will make a fortune with your friend.",
     "Everything will now come your way.",
