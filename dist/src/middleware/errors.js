@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.code = exports.HttpException = exports.exceptions = exports.errorMiddleware = void 0;
 /**
  * Philosophically don't look to adopt the perfect response shape,
  * instead look to adopt the one you like and then adapt it to your needs.
@@ -7,6 +8,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * statusCode, error message, and stack trace or error payloads are enough for most cases.
  */
 class HttpException extends Error {
+    statusCode;
+    message;
+    name;
+    data;
     /**
      * A generic Exception class for HTTP responses
      * @param statusCode {number} - HTTP status code

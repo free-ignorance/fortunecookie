@@ -6,6 +6,7 @@ const config = {
     transform: {
         "^.+\\.ts?$": "ts-jest",
     },
+    // setupFilesAfterEnv: ['./tests/bootstrap.ts']
 };
 exports.default = config;
 //# sourceMappingURL=jest.config.js.map

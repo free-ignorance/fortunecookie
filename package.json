@@ -16,7 +16,9 @@
     "daphne89 <https://github.com/daphne89>"
   ],
   "scripts": {
-    "start": "node dist/server.ts",
+    "start": "node dist/src/server.js",
+    "start:dev": "ts-node src/server.ts",
+    "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage | codecov",
