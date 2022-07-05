@@ -17,6 +17,13 @@ This RESTful API returns a json object with aphorisms
 
 ### Basic usage
 
+
+```bash 
+curl aphorismcookie.herokuapp.com/
+```
+
+also we have a mirrored api hosted at
+
 ```bash
 curl https://sage.af/api/fortune/
 ```
