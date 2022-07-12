@@ -18,10 +18,10 @@ jobs:
       - name: Install Dependencies . . .
         working-directory: .
         run: npm ci
-      - name: Build Docker Image "free-ignorance/aphorismcookie"
-        run: docker build -t free-ignorance/aphorismcookie .
+      - name: Build Docker Image "free-ignorance/fortunecookie"
+        run: docker build -t free-ignorance/fortunecookie .
       - name: Run The Lints . . .
-        run: docker run free-ignorance/aphorismcookie npm run test:lint
+        run: docker run free-ignorance/fortunecookie npm run test:lint
   tests:
     name: tests
     runs-on: ubuntu-latest
@@ -35,10 +35,10 @@ jobs:
       - name: Install Dependencies . . .
         working-directory: .
         run: npm ci
-      - name: Build Docker Image "free-ignorance/aphorismcookie"
-        run: docker build -t free-ignorance/aphorismcookie .
+      - name: Build Docker Image "free-ignorance/fortunecookie"
+        run: docker build -t free-ignorance/fortunecookie .
       - name: Run The Tests . . .
-        run: docker run free-ignorance/aphorismcookie npm run test
+        run: docker run free-ignorance/fortunecookie npm run test
   codecoverage:
     name: codecoverage
     runs-on: ubuntu-latest
@@ -52,10 +52,10 @@ jobs:
       - name: Install Dependencies . . .
         working-directory: .
         run: npm ci
-      - name: Build Docker Image "free-ignorance/aphorismcookie"
-        run: docker build -t free-ignorance/aphorismcookie .
+      - name: Build Docker Image "free-ignorance/fortunecookie"
+        run: docker build -t free-ignorance/fortunecookie .
       - name: Run The Tests . . .
-        run: docker run free-ignorance/aphorismcookie npm run test:coverage --env CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN}
+        run: docker run free-ignorance/fortunecookie npm run test:coverage --env CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN}}
       - name: Codecove Action . . .
         uses: codecov/codecov-action@v3
         with:
