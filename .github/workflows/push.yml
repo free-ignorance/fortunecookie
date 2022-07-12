@@ -55,7 +55,7 @@ jobs:
       - name: Build Docker Image "free-ignorance/aphorismcookie"
         run: docker build -t free-ignorance/aphorismcookie .
       - name: Run The Tests . . .
-        run: docker run free-ignorance/aphorismcookie npm run test:coverage
+        run: docker run free-ignorance/aphorismcookie npm run test:coverage --env CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN}
       - name: Codecove Action . . .
         uses: codecov/codecov-action@v3
         with:
