@@ -23,7 +23,7 @@
     "postbuild": "cp package.json dist/package.json && cd dist && npm install",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage | codecov",
+    "test:coverage": "jest --coverage | ./node_modules/.bin/codecov",
     "test:lint": "eslint . 'src/**/*.ts'",
     "test:lint:fix": "eslint . --fix 'src/**/*.ts'"
   },
