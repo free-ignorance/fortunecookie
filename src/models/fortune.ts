@@ -50,7 +50,7 @@ const li = [
   "Enthusiasm is as contagious as apathy",
   "Alas, the onion you eat is some one elses water lily",
   "Why ask for advice if you wont take any",
-  "The possibility of a career change is near.", // nsfw?
+  "The possibility of a career change is near.", // nsfw
   "Consolidate rather than expand your business in the near future.", // nsfw
   "I am sorry, too high to respond", // nsfw?
   "Dont blow out other peoples candles, it wont make yours brighter.", // nsfw?
@@ -71,6 +71,8 @@ const li = [
   "We all have extraordinary coded within us, waiting to be released.",
   "Don't worry about the stock market. Invest in family.",
   "Everything has beauty but not everyone sees it.",
+  "A hopeless person sees difficulties in every chance, but a hopeful person sees chances in every difficulty.",
+  "A Graceful Refusal is always better than a lengthy promise.",
 ];
 
 export function getFortune(): string {
