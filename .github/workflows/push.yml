@@ -57,7 +57,7 @@ jobs:
       - name: Run The Tests . . .
         run: docker run free-ignorance/aphorismcookie npm run test:coverage
       - name: Codecove Action . . .
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN}} # not required for public repos
           # fail_ci_if_error: true # optional (default = false)
