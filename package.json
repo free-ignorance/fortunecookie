@@ -16,8 +16,9 @@
     "daphne89 <https://github.com/daphne89>"
   ],
   "scripts": {
-    "serve": "node dist/src/server.js",
-    "start": "ts-node src/server.ts",
+    "serve": "node dist/src/server",
+    "start": "ts-node src/server",
+    "typings": "src/index",
     "build": "tsc",
     "postbuild": "cp package.json dist/package.json && cd dist && npm install",
     "test": "jest",
