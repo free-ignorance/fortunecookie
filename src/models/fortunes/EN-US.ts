@@ -67,8 +67,6 @@
     "Just as a snake sheds its skin, we must shed our past over and over again.",
     "In the end, it’s not the years in your life that count. It’s the life in your years.", // i think lincon
     "You get in life what you have the courage to ask for.", // i think Oprah Winfrey
-    "Life isn’t about finding yourself. Life is about creating yourself.", //George Bernard Shaw
-    "Sometimes a hypocrite is nothing more than a person in the process of changing.", // Dalinar Kholin.
     "A Person can not be comfortable without their own approval.",
     "It's your attitude not your aptitude that determines your altitude.",
     "A calm sea does not make a skilled sailor.",
@@ -80,5 +78,35 @@
     "A hopeless person sees difficulties in every chance, but a hopeful person sees chances in every difficulty.",
     "A Graceful Refusal is always better than a lengthy promise.",
   ];
+
+
+  // wise words are best when you know who said them, even better in what context they were said...
+  const quotes = [
+    {
+        id: 1,
+        message: "The faults of a superior person are like the sun and moon. They have their faults, and everyone sees them; they change and everyone looks up to them.",
+        author: "Confucius",
+    },
+    {
+        id: 2,
+        message: "God may exist, but science can explain the universe without the need for a creator.",
+        author: "Stephen Hawking",
+    },
+    {
+        id: 3,
+        message: "Moral excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
+        author: "Aristotle",
+    },
+    {
+        id: 4,
+        message: "Life isn’t about finding yourself. Life is about creating yourself.",
+        author: "George Bernard Shaw",
+    },
+    {
+        id: 5,
+        message: "Sometimes a hypocrite is nothing more than a person in the process of changing.",
+        author: "Dalinar Kholin",
+    },
+  ]
 
   
