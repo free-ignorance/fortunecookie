@@ -1,6 +1,6 @@
 import * as express from "express";
 import { DefaultController } from "./";
-import { getFortune } from "../models/fortune";
+import { getFortune } from "../models/fortunes";
 
 class MainController extends DefaultController {
   constructor() {
