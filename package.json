@@ -18,6 +18,7 @@
   "scripts": {
     "serve": "node dist/src/server",
     "start": "ts-node src/server",
+    "heroku-start": "ts-node src/server",
     "typings": "src/index",
     "build": "tsc",
     "postbuild": "cp package.json dist/package.json && cd dist && npm install",
