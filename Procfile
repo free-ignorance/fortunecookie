@@ -1,1 +1,1 @@
-worker: node src/index.js
+web: npm run heroku-start
