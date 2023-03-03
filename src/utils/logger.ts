@@ -1,5 +1,6 @@
 import { createLogger, transports, format } from "winston";
 
+// Create a logger instance
 const logger = createLogger({
   transports: [
     new transports.Console({
