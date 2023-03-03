@@ -1,12 +1,10 @@
 fortunecookie
 =========
 
-[![Issues](https://img.shields.io/github/issues/free-ignorance/fortunecookie.svg)](https://github.com/free-ignorance/fortunecookie/issues)
-[![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/free-ignorance/fortunecookie/blob/main/LICENSE)
-![Known Vulnerabilities](https://snyk.io/test/github/free-ignorance/fortunecookie/badge.svg)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/free-ignorance/fortunecookie.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/free-ignorance/fortunecookie/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/free-ignorance/fortunecookie.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/free-ignorance/fortunecookie/context:javascript)
-[![codecov](https://codecov.io/gh/free-ignorance/fortunecookie/branch/main/graph/badge.svg)](https://codecov.io/gh/free-ignorance/fortunecookie)
+[![Issues](https://img.shields.io/github/issues/wh-iterabb-it/fortunecookie.svg)](https://github.com/wh-iterabb-it/fortunecookie/issues)
+[![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/wh-iterabb-it/fortunecookie/blob/main/LICENSE)
+![Known Vulnerabilities](https://snyk.io/test/github/wh-iterabb-it/fortunecookie/badge.svg)
+[![codecov](https://codecov.io/gh/wh-iterabb-it/fortunecookie/branch/main/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/fortunecookie)
 
 
 
