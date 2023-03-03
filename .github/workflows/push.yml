@@ -43,25 +43,8 @@ jobs:
     name: codecoverage
     runs-on: ubuntu-latest
     steps:
-      - name: Checking Out Commits Securely . . .
-        uses: actions/checkout@v2
-      - name: Setup Node 14 Environment . . .
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - name: Install Dependencies . . .
-        working-directory: .
-        run: npm ci
-      - name: Build Docker Image "free-ignorance/fortunecookie"
-        run: docker build -t free-ignorance/fortunecookie .
-      - name: Run The Tests . . .
-        run: docker run free-ignorance/fortunecookie npm run test:coverage --env CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN}}
-      - name: Codecove Action . . .
+      - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN}} # not required for public repos
-          # fail_ci_if_error: true # optional (default = false)
-          verbose: true # optional (default = false)
 
 
 
