@@ -34,7 +34,7 @@ class App {
     this.app.use(helmet());
     this.app.use(compression());
     this.app.use(bodyParser.json());
-    
+
     /** set up cors middleware
      * @param {Request} req - Express request object
      * @param {Response} res - Express response object
