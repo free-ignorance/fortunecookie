@@ -3,6 +3,8 @@ import * as express from "express";
 import helmet from "helmet";
 import compression from "compression";
 
+import { corsMiddleware } from "./middleware/cors";
+
 const PORT = process.env.PORT || 5000;
 
 interface Controller {
@@ -34,21 +36,7 @@ class App {
     this.app.use(helmet());
     this.app.use(compression());
     this.app.use(bodyParser.json());
-
-    /** set up cors middleware
-     * @param {Request} req - Express request object
-     * @param {Response} res - Express response object
-     * @param {Next} next - Express Next object
-     */
-    this.app.use((req, res, next) => {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header(
-        "Access-Control-Allow-Headers",
-        "Accept, Authorization, Content-Type, Origin, X-Requested-With"
-      );
-      res.header("Access-Control-Allow-Methods", "GET");
-      next();
-    });
+    this.app.use(corsMiddleware);
   }
 
   private initializeControllers(controllers: Controller[]) {

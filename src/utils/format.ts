@@ -1,6 +1,6 @@
 /**
  * toHHMMSS
- * turns an amount of seconds into days, hours, minutes seconds
+ * @description - Formats a number of seconds into a string of 'dd:hh:mm:ss' days, hours, minutes seconds returned as a string
  * @param {number} inctime - an amount of seconds to be formatted
  * @return {string} 'dd:hh:mm:ss' days, hours, minutes seconds returned as a string
  */
