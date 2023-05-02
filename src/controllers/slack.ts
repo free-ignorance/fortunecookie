@@ -11,12 +11,14 @@ class SlackController extends DefaultController {
   private initializeRoutes() {
     this.router.get(this.path, this.getSlackResponseRandom);
   }
-  
+
   private getSlackResponseRandom = (
     request: express.Request,
     response: express.Response
   ) => {
-    response.status(200).send({ response_type: "in_channel", text: `${getFortune()}` });
+    response
+      .status(200)
+      .send({ response_type: "in_channel", text: `${getFortune()}` });
   };
 }
 
