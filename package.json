@@ -1,6 +1,9 @@
 {
   "name": "aphorismcookie",
-  "version": "1.0.0",
+  "version": "0.1.1",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "A simple API which returns aphorisms",
   "repository": {
     "type": "git",
