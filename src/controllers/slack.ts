@@ -16,9 +16,10 @@ class SlackController extends DefaultController {
     request: express.Request,
     response: express.Response
   ) => {
-    response
-      .status(200)
-      .send({ response_type: "in_channel", text: getFortune()});
+    response.status(200).send({
+      response_type: "in_channel",
+      text: getFortune(),
+    });
   };
 }
 
