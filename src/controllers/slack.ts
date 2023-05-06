@@ -18,7 +18,7 @@ class SlackController extends DefaultController {
   ) => {
     response.status(200).send({
       response_type: "in_channel",
-      text: "🥠 your fortune reads: '" + getFortune()  + "'",
+      text: "🥠 your fortune reads: '" + getFortune() + "'",
     });
   };
 }
