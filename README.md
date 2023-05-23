@@ -20,19 +20,27 @@ This RESTful API returns a json object with aphorisms
 curl aphorismcookie.herokuapp.com/
 ```
 
-also we have a mirrored api hosted at
-
-```bash
-curl https://sage.af/api/fortune/
-```
-
 Response
 
 ```json
 "data": {
   "message": "Everything will now come your way.",
+},
+"meta": {
+  "status": 200,
 }
 ```
+
+
+### Documentation
+
+<div align="center">
+  <p>
+    <a href="https://rapidapi.com/wh-iterabb-it-wh-iterabb-it-default/api/fortune-cookie4/">
+      <img width="200" height="52" src="https://rapidapi.com/static-assets/default/dark-logo-78e48dc1-ca3f-4d67-a6f5-74032f439c8b.svg" />
+    </a>
+  </p>
+</div>
 
 ## Local Development
 
