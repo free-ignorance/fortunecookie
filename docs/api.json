@@ -1,0 +1,149 @@
+{
+   "openapi": "3.0.0",
+   "servers": [
+      {
+         "description": "Documentation for https://aphorismcookie.herokuapp.com, an api for returns a json object with aphorisms, almost like what you get in a fortune cookie.",
+         "url": "https://aphorismcookie.herokuapp.com"
+      }
+   ],
+   "info": {
+      "description": "This RESTful API returns a json object with aphorisms, almost like what you get in a fortune cookie.",
+      "version": "0.1.1",
+      "title": "Fortune Cookie Response",
+      "contact": {
+         "email": "admin@wh.iterabb.it",
+         "name": "Github Issues for Support",
+         "url": "https://github.com/free-ignorance/fortunecookie"
+      },
+      "license": {
+         "name": "MIT License",
+         "url": "https://github.com/free-ignorance/fortunecookie/blob/main/LICENSE"
+      }
+   },
+   "tags": [
+      {
+         "name": "public",
+         "description": "Operations available to the public"
+      }
+   ],
+   "paths": {
+      "/": {
+         "get": {
+            "tags": [
+               "public"
+            ],
+            "summary": "",
+            "operationId": "defaultRoot",
+            "description": "",
+            "responses": {
+               "200": {
+                  "description": "A successful response will contain a single fortune",
+                  "content": {
+                     "application/json": {
+                        "schema": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "#/components/schemas/fortune"
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "/health": {
+        "get": {
+          "tags": [
+            "public"
+          ],
+          "summary": "health check endpoint",
+          "operationId": "healthcheck",
+          "description": "The health check endpoint will return a status of 200 if the api is up and ready to recieve connections. It will tell the uptime, and total requests served since last restart. It also has a field for version which corresponds to the versioned release from the github repo.  \n",
+          "responses": {
+             "200": {
+                "description": "Default Health check response",
+                "content": {
+                   "application/json": {
+                      "schema": {
+                          "$ref": "#/components/schemas/healthcheck"
+                        }
+                      }
+                   }
+                }
+             }
+          }
+      }
+   },
+   "components": {
+      "schemas": {
+         "fortune": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/fortuneData"
+              },
+              "meta": {
+                "$ref": "#/components/schemas/fortuneMeta"
+              }
+            }
+         },
+         "fortuneData": {
+            "type": "object",
+            "properties": {
+             "message": {
+               "type": "string",
+               "example": "A Person can not be comfortable without their own approval."
+             }
+            }
+         },
+         "fortuneMeta": {
+            "type": "object",
+            "properties": {
+             "status": {
+              "type": "integer",
+              "format": "int32",
+              "example": 200
+             }
+            }
+         },
+         "healthcheck": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/healthcheckData"
+              },
+              "meta": {
+                "$ref": "#/components/schemas/healthcheckMeta"
+              }
+            }
+         },
+         "healthcheckMeta": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "example": "2023-05-23T17:10:27.359Z"
+            },
+            "uptime": {
+              "type": "string",
+              "example": "00:00:39:45"
+            },
+            "version": {
+              "type": "string",
+              "example": "0.1.1"
+            }
+          }
+        },
+        "healthcheckData": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "ok"
+            }
+          }
+        }
+      }
+   }
+}
