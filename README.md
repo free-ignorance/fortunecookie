@@ -10,14 +10,14 @@ fortunecookie
 
 ## Description:
 
-This RESTful API returns a json object with aphorisms
+This RESTful API returns a json object with aphorisms, much like a opening a fortune cookie. 
 
 
 ### Basic usage
 
 
 ```bash 
-curl aphorismcookie.herokuapp.com/
+curl https://aphorismcookie.herokuapp.com
 ```
 
 Response
