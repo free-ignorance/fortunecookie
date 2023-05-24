@@ -16,7 +16,7 @@ class MainController extends DefaultController {
     request: express.Request,
     response: express.Response
   ) => {
-    response.status(200).send(defaultFortuneResponse);
+    response.status(200).send(defaultFortuneResponse());
   };
 }
 
