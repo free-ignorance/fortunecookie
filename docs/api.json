@@ -8,7 +8,7 @@
    ],
    "info": {
       "description": "This RESTful API returns a json object with aphorisms, almost like what you get in a fortune cookie.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "title": "Fortune Cookie Response",
       "contact": {
          "email": "admin@wh.iterabb.it",
