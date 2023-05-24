@@ -3,9 +3,7 @@ interface ResponseData {
 }
 
 interface ResponseMeta {
-  date: string;
-  uptime: string;
-  version: string;
+  status: number;
 }
 
 interface FortuneResponse {
@@ -99,16 +97,28 @@ function getFortune(): string {
   return fortuneList[Math.floor(Math.random() * fortuneList.length)];
 }
 
-function slackFortune(): FortuneSlackResponse {
+function slackFortuneResponse(): FortuneSlackResponse {
   return {
     response_type: "in_channel",
     text: "🥠 your fortune reads: '" + getFortune() + "'",
   };
 }
 
+function defaultFortuneResponse(): FortuneResponse {
+  return {
+    data: {
+      message: getFortune(),
+    },
+    meta: {
+      status: 200,
+    },
+  };
+}
+
 export {
   getFortune,
-  slackFortune,
+  defaultFortuneResponse,
+  slackFortuneResponse,
   FortuneResponse,
   FortuneSlackResponse,
   ResponseData,

@@ -1,6 +1,6 @@
 import * as express from "express";
 import { DefaultController } from "./";
-import { getFortune } from "../models/fortune";
+import { defaultFortuneResponse } from "../models/fortune";
 
 class MainController extends DefaultController {
   constructor() {
@@ -16,14 +16,7 @@ class MainController extends DefaultController {
     request: express.Request,
     response: express.Response
   ) => {
-    response.status(200).send({
-      data: {
-        message: `${getFortune()}`,
-      },
-      meta: {
-        status: 200,
-      },
-    });
+    response.status(200).send(defaultFortuneResponse);
   };
 }
 
