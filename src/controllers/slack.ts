@@ -16,7 +16,7 @@ class SlackController extends DefaultController {
     request: express.Request,
     response: express.Response
   ) => {
-    response.status(200).send(slackFortuneResponse);
+    response.status(200).send(slackFortuneResponse());
   };
 }
 
