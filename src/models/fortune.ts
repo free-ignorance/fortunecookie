@@ -1,4 +1,22 @@
-const li = [
+interface ResponseData {
+  message: string;
+}
+
+interface ResponseMeta {
+  status: number;
+}
+
+interface FortuneResponse {
+  data: ResponseData;
+  meta: ResponseMeta;
+}
+
+interface FortuneSlackResponse {
+  response_type: string;
+  text: string;
+}
+
+const fortuneList = [
   "You will make a fortune with your friend.",
   "Everything will now come your way.",
   "You have at your command the wisdom of the ages.",
@@ -75,6 +93,34 @@ const li = [
   "A Graceful Refusal is always better than a lengthy promise.",
 ];
 
-export function getFortune(): string {
-  return li[Math.floor(Math.random() * li.length)];
+function getFortune(): string {
+  return fortuneList[Math.floor(Math.random() * fortuneList.length)];
 }
+
+function slackFortuneResponse(): FortuneSlackResponse {
+  return {
+    response_type: "in_channel",
+    text: "🥠 your fortune reads: '" + getFortune() + "'",
+  };
+}
+
+function defaultFortuneResponse(): FortuneResponse {
+  return {
+    data: {
+      message: getFortune(),
+    },
+    meta: {
+      status: 200,
+    },
+  };
+}
+
+export {
+  getFortune,
+  defaultFortuneResponse,
+  slackFortuneResponse,
+  FortuneResponse,
+  FortuneSlackResponse,
+  ResponseData,
+  ResponseMeta,
+};

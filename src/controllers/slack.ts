@@ -1,6 +1,6 @@
 import * as express from "express";
 import { DefaultController } from "./";
-import { getFortune } from "../models/fortune";
+import { slackFortuneResponse } from "../models/fortune";
 
 class SlackController extends DefaultController {
   constructor() {
@@ -16,10 +16,7 @@ class SlackController extends DefaultController {
     request: express.Request,
     response: express.Response
   ) => {
-    response.status(200).send({
-      response_type: "in_channel",
-      text: "🥠 your fortune reads: '" + getFortune() + "'",
-    });
+    response.status(200).send(slackFortuneResponse);
   };
 }
 
