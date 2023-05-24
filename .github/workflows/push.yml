@@ -39,14 +39,7 @@ jobs:
         run: docker build -t free-ignorance/fortunecookie .
       - name: Run The Tests . . .
         run: docker run free-ignorance/fortunecookie npm run test
-  codecoverage:
-    name: codecoverage
-    runs-on: ubuntu-latest
-    steps:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
-
-
