@@ -32,9 +32,9 @@
             "tags": [
                "public"
             ],
-            "summary": "",
+            "summary": "Default Root Endpoint for Random Fortune",
             "operationId": "defaultRoot",
-            "description": "",
+            "description": "default get request to the random fortune endpoint returning a standard response",
             "responses": {
                "200": {
                   "description": "A successful response will contain a single fortune",
@@ -57,7 +57,7 @@
           "tags": [
             "public"
           ],
-          "summary": "health check endpoint",
+          "summary": "Health Check Endpoint",
           "operationId": "healthcheck",
           "description": "The health check endpoint will return a status of 200 if the api is up and ready to recieve connections. It will tell the uptime, and total requests served since last restart. It also has a field for version which corresponds to the versioned release from the github repo.  \n",
           "responses": {
@@ -67,6 +67,28 @@
                    "application/json": {
                       "schema": {
                           "$ref": "#/components/schemas/healthcheck"
+                        }
+                      }
+                   }
+                }
+             }
+          }
+      },
+      "/slack": {
+        "get": {
+          "tags": [
+            "public"
+          ],
+          "summary": "Default Root Endpoint for Random Fortune In Slack Style Response",
+          "operationId": "slack",
+          "description": "This endpoint's response shape is designed to match the requirements for slack messages. You can easily use this api to have a POST or GET for this /slack endpoint to get the same functionality as the defaultRoot endpoint, but in a slack style response.  \n",
+          "responses": {
+             "200": {
+                "description": "A successful response will contain a single fortune",
+                "content": {
+                   "application/json": {
+                      "schema": {
+                          "$ref": "#/components/schemas/fortuneSlack"
                         }
                       }
                    }
@@ -85,6 +107,19 @@
               },
               "meta": {
                 "$ref": "#/components/schemas/fortuneMeta"
+              }
+            }
+         },
+         "fortuneSlack": {
+            "type": "object",
+            "properties": {
+              "response_type": {
+                "type": "string",
+                "example": "in_channel"
+              },
+              "text": {
+                "type": "string",
+                "example": "🥠 your fortune reads: 'Enthusiasm is as contagious as apathy'"
               }
             }
          },
