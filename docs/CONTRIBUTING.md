@@ -8,5 +8,7 @@ The following is a set of guidelines for contributing to free-ignorance projects
 
 
 We are currently looking for help in the following areas!
+Translation!
+https://github.com/free-ignorance/fortunecookie/issues/160
 
 
