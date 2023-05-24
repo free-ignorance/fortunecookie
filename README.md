@@ -7,6 +7,9 @@ fortunecookie
 [![codecov](https://codecov.io/gh/free-ignorance/fortunecookie/branch/main/graph/badge.svg)](https://codecov.io/gh/free-ignorance/fortunecookie)
 
 
+🥠 Fortunecookie API
+=========
+
 
 ## Description:
 
@@ -23,11 +26,28 @@ curl https://aphorismcookie.herokuapp.com
 Response
 
 ```json
-"data": {
-  "message": "Everything will now come your way.",
-},
-"meta": {
-  "status": 200,
+{
+  "data": {
+    "message": "Everything will now come your way.",
+  },
+  "meta": {
+    "status": 200,
+  }
+}
+```
+
+Also has a slack friendly endpoint!
+
+```bash 
+curl https://aphorismcookie.herokuapp.com/slack
+```
+
+Response
+
+```json
+{
+  "response_type": "in_channel",
+  "text": "🥠 your fortune reads: 'Everything has beauty but not everyone sees it.'"
 }
 ```
 
