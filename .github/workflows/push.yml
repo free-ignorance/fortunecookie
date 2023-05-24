@@ -54,8 +54,10 @@ jobs:
         working-directory: .
         run: npm ci
       - name: Run The Tests . . .
-        run: npm run test --coverage
+        run: npm run test --coverage --coverageDirectory=./coverage/reports/
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage/reports/
+          fail_ci_if_error: true
