@@ -36,7 +36,7 @@
     "body-parser": "^1.20.2",
     "compression": "1.7.4",
     "express": "^4.19.1",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "typescript": "5.4.3",
     "winston": "^3.12.0"
   },
